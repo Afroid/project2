@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}	
+
+html, body{
+	top: 0px;
+	margin: 0px;
+	padding: 0px;	
+	background-color: #292929;
+}
+
+
+header#mainHeader{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	background-color: #ccc;
+	border-bottom: $accentColor 2px solid;
+	#homeTeamLogo{
+		font-size: 20px;
+		line-height: 50px;
+		margin: 0px 25px;
+		text-transform: uppercase;
+	}
+}
+
+
+
+#mainContent{
+	position: relative;
+	left: 0px;
+	right: 0px;
+	margin: 0 auto;
+	width: 90%;
+	max-width: 800px;
+	margin-top: 65px;
+
+	.widgetFrame{
+		position: relative;
+		width: 100%;
+		margin: 25px 0px;
+		padding: 15px;
+		background-color: rgba(255,255,255,0.15); //just to be able to see it for now
+		border-radius: 5px;
+		border: 2px solid $accentColor;
+	}
+	
+	#currentGame{
+		min-height: 100px;
+	}
+
+	#fieldAndBroadcast{
+		
+	}
+
+	#depthChart{
+		min-height: 250px;
+	}		
+}
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 750px) {
+
+
+}

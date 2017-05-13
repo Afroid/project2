@@ -26,7 +26,10 @@
     "sequelize-cli": "^2.7.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.8",
     "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
     "mocha": "^3.3.0"
   }
 }
