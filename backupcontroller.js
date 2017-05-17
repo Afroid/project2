@@ -68,10 +68,11 @@ function token(req,res){
               exp: Math.floor(Date.now() / 1000) + (60 * 60),
               data: user.id
             }, 'randomsecretforsigningjwt');
-            res.status(200).json({
+            res.cookie
+            /*res.status(200).json({
               id: user.id,
               username: user.username,
-              token: userToken
+              token: userToken*/
             });
           }
         });
