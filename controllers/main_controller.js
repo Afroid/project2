@@ -21,7 +21,7 @@ apiRouter.get("/test", function(req, res) {
 
 
 // POST route for creating a new user
-apiRouter.post("/user", function(req, res) {
+apiRouter.post("/signUp", function(req, res) {
   bcrypt.hash(req.body.password, salt, function(err, hash) {
     // Store hash in your password DB.
     // TODO: update schema to enforce unique usernames
@@ -32,7 +32,8 @@ apiRouter.post("/user", function(req, res) {
       team: req.body.team
     })
       .then(function(dbPost) {
-        res.status(200).json({'status': 'success'});
+        token(req,res);
+        /*res.status(200).json({'status': 'success'});*/
 
       })
       .catch(function (err) {
@@ -42,7 +43,11 @@ apiRouter.post("/user", function(req, res) {
 
 });
 
-apiRouter.post("/user/signin", function(req, res) {
+apiRouter.post("/signIn", function(req, res) {
+  token(req,res);
+});
+
+function token(req,res){
   db.User.findOne({
     username: req.body.username
   })
@@ -72,10 +77,8 @@ apiRouter.post("/user/signin", function(req, res) {
         });
       }
 
-    });
-});
-
-
+    })
+}
 // Routes
 // =============================================================
 module.exports = apiRouter;
