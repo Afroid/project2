@@ -26,8 +26,10 @@
     "jsonwebtoken": "^7.4.0",
     "method-override": "^2.3.8",
     "mysql": "^2.13.0",
+    "request-promise": "^4.2.1",
     "sequelize": "^3.30.4",
-    "sequelize-cli": "^2.7.0"
+    "sequelize-cli": "^2.7.0",
+    "weather-js": "^2.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.18.8",
