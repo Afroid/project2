@@ -36,6 +36,7 @@ app.set("view engine", "handlebars");
 var auth = require("./controllers/authController.js");
 var appPages= require("./controllers/pageController.js");
 var appApi = require("./controllers/apiController.js");
+var sports = require("./controllers/sportsRadarController.js");
 
 var gtGroupSecret = process.env.GT_GROUP_SECRET || 'ImTooLazyToWriteMyOwnSecretEnvValue';
 
@@ -58,6 +59,8 @@ app.use('/app', jwtExp({
   }
 }));
 app.use('/app', appPages);
+
+app.use('/', sports);
 
 app.use('/api', function (err, req, res, next) {
   if (err.name === 'UnauthorizedError') {
@@ -91,7 +94,11 @@ app.get("/", function(req, res) {
   } else {
     res.redirect("/app")
   }
-})
+});
+
+app.get("/test", function(req, res) {
+  res.redirect('/sports');
+});
 
 db.sequelize.sync({ /* force: true */ }).then(function() {
   app.listen(port, function() {
