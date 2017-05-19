@@ -3,9 +3,10 @@ var apiRouter= express.Router();
 var weather = require("weather-js");
 
 apiRouter.get('/weather/:zipcode', function (req, res) {
-  
+ 
+var searchZip = process.argv[2]; 
 
-weather.find({ search: "30126, GA", degreeType: "C", Date: "Current" }, function(err, result) {
+weather.find({ search: searchZip, degreeType: "F" }, function(err, result) {
 
   // If there is an error log it.
   if (err) {
