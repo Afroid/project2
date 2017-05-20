@@ -78,7 +78,7 @@ header#mainHeader{
 	#currentGame{
 		min-height: 100px; 
 
-		#teamLogo_home{
+		#teamLogo_away{
 			position: absolute;
 			top: 0%;
 			left: 10%;
@@ -98,7 +98,7 @@ header#mainHeader{
 			transition: top 0.5s;	
 		}
 
-		#teamLogo_away{
+		#teamLogo_home{
 			position: absolute;
 			top: 0%;
 			right: 10%;
@@ -261,7 +261,7 @@ input[type=submit] {
 			}
 		}		
 
-		#teamLogo_home{ 
+		#teamLogo_away{ 
 			left: 4% !important; 
 		}
 
@@ -269,7 +269,7 @@ input[type=submit] {
 			top: 20% !important;  
 		}
 
-		#teamLogo_away{ 
+		#teamLogo_home{ 
 			right: 4% !important; 
 		}
 
