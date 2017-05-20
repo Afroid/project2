@@ -31,11 +31,16 @@ header#mainHeader{
 	background-color: rgba(0,0,0,0.43);
 	border-bottom: $accentColor 5px solid;
 	box-shadow: 3px 3px 10px rgba(0,0,0,0.65);
+	transition: height 0.5s;
 	#homeTeamLogo{
 		font-size: 20px;
 		line-height: 80px;
 		margin: 0px 25px;
 		text-transform: uppercase;
+		img{
+			width: 280px;
+			transition: width 0.5s;
+		}
 	}
 }
 
@@ -48,7 +53,8 @@ header#mainHeader{
 	margin: 0 auto;
 	width: 90%;
 	max-width: 800px;
-	margin-top: 65px;
+	margin-top: 85px;
+	min-width: 315px;
 
 	.widgetFrame{
 		position: relative;
@@ -65,19 +71,124 @@ header#mainHeader{
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3f6f8f9', endColorstr='#b3f5f7f9',GradientType=0 ); /* IE6-9 */
 		box-shadow: 3px 3px 10px rgba(0,0,0,0.65);
 	}
-	
+	.hasTab	 {
+		margin-top: 75px;
+	}
+
 	#currentGame{
-		min-height: 100px;
+		min-height: 100px; 
+
+		#teamLogo_home{
+			position: absolute;
+			top: 0%;
+			left: 10%;
+			width: 40%; 
+			max-width: 150px;
+			min-width: 50px;
+			transition: left 0.5s;
+		}
+
+		#vs{ 
+			position: absolute;
+			top: 10%;
+			@include horizontalAlign;
+			width: 10%; 
+			max-width: 95px;
+			min-width: 35px;
+			transition: top 0.5s;	
+		}
+
+		#teamLogo_away{
+			position: absolute;
+			top: 0%;
+			right: 10%;
+			width: 40%; 
+			max-width: 150px;
+			min-width: 50px;
+			transition: right 0.5s;
+		}
+
+
+		#weatherIcon{
+			position: relative;
+			display: block;
+			@include horizontalAlign;
+			margin-top: 75px;
+			margin-bottom: -15px;
+			width: 25%;	
+			max-width: 220px;
+			min-width: 50px;
+		}		
 	}
 
 	#fieldAndBroadcast{
 		
+		#stadium{
+			font-weight: bold;
+			display: inline-block;
+			text-align: left;
+			width: 60%;
+			left: 5%;
+			@include truncateText;
+			font-size: 24px;
+		}
+
+		#network{
+			font-weight: bold;
+			display: inline-block;
+			text-align: right;
+			width: 30%;
+			@include truncateText;
+			font-size: 24px;
+			float: right;
+			right: 5%;
+		}
+
 	}
 
 	#depthChart{
 		min-height: 250px;
+
+		ul{
+		    left: 0%;
+		    -webkit-padding-start: 0px;
+		}
+		li{
+			list-style: none;
+			width: 100%;
+			padding: 10px 15px;
+			font-weight: bold;
+			margin: 8px 0px;			
+			border-radius: 6px;
+		}
+		li:nth-child(odd){
+			background-color: #a1a1a1;
+			border: 3px solid rgba(255,255,255,0.16);
+		}
+		li:nth-child(even){
+			background-color: #cac9c9;
+			border: 3px solid rgba(114,114,114,0.16);
+		}
 	}		
 }
+
+
+
+
+
+.tab{
+	position: absolute;
+	padding: 0px 25px;
+	margin-top: -74px;
+	border-radius: 3px;
+	background-color: #cc0001;
+	display: inline-block;
+	img{
+		transition: width 0.5s;
+	}
+}
+
+
 
 
 
@@ -129,7 +240,60 @@ input[type=submit] {
 
 /* Media Queries */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 575px) {
 
+	header#mainHeader{
+		height: 65px !important;
+	}
+
+	#homeTeamLogo{
+		img{
+			width: 220px !important;
+		}
+	}
+
+
+	#currentGame{ 
+
+		.tab{  
+			img{
+				width: 150px !important;
+			}
+		}		
+
+		#teamLogo_home{ 
+			left: 4% !important; 
+		}
+
+		#vs{  
+			top: 20% !important;  
+		}
+
+		#teamLogo_away{ 
+			right: 4% !important; 
+		}
+
+
+		#weatherIcon{ 
+			width: 25% !important;	 
+		}		
+	}	
+
+
+	#depthChart{
+		.tab{  
+			img{
+				width: 70px !important;
+			}
+		}			
+	}
+
+
+	.tab{ 
+		margin-top: -58px; 
+		img{
+			
+		}
+	}	
 
 }
