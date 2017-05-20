@@ -2,11 +2,16 @@
 
 	<!-- <h1 id="mainTitle">My Teams Stats:</h1> -->
 
-	<div id="currentGame" class="widgetFrame">		
+	<div id="currentGame" class="widgetFrame hasTab">	
+		<div class="tab"><img src="/assets/img/todaysGame.png"></div>
 
 		<!-- This is where home and away teams logos will appear -->
+		<img id="teamLogo_home" src="/assets/img/teamLogos/ATL.png">
+		<img id="vs" src="/assets/img/vs.png">
+		<img id="teamLogo_away" src="/assets/img/teamLogos/WSH.png">
 
 		<!-- This is where the weather data will display -->
+		<img id="weatherIcon" src="/assets/img/sun.png" alt="">
 
 	</div>
 
@@ -14,30 +19,33 @@
 
 	<div id="fieldAndBroadcast" class="widgetFrame">		
 
-		<!-- This is where we will show the field name and broadcast station for the game -->
+		<div id="stadium">SunTrust Park</div>
+
+		<div id="network">FS-SO</div>
 
 	</div>
 
 
 
-	<div id="depthChart" class="widgetFrame">		
+	<div id="depthChart" class="widgetFrame hasTab">	
+		<div id="homeTab" class="tab"><img src="/assets/img/home.png"></div>	
 
-		<!-- This is where we will build the tabbed tabbles for home and away team level 1 depth charts -->
+		<h2 class="widgetTitle">Depth Chart <span>(Level 1)</span></h2>
 
-	</div>
+		<ul id="homeDepth">
+			<li>Jayson Werth</li>
+			<li>Michael Taylor</li>
+			<li>Bryce Harper</li>
+			<li>Anthony Rendón</li>
+			<li>Trea Turner</li>
+			<li>Daniel Murphy</li>
+			<li>Ryan Zimmerman</li>
+			<li>Maxwell Scherzer</li>
+			<li>Matthew Wieters</li>
+			<li>Koda Glove</li>
+		</ul>
 
-	<div id="teamStats01">		
-		<h1>not implemented</h1>
-		<!-- example handlebars template -->
-		<!-- <ul class="stats">
-		  {{#each stats}} 
-			  	<li> 
-			      <p><span class="row">{{this.id}}).</span> {{this.stat_runs}}</p> 
-			  	</li> 
-		  {{/each}}
-		</ul> -->
-
-	</div>		
+	</div> 
 
 
 </div>
