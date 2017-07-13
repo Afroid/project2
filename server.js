@@ -100,6 +100,12 @@ app.get("/test", function(req, res) {
   res.redirect('/sports');
 });
 
+    // "username": "root",
+    // "password": null,
+    // "database": "database_test",
+    // "host": "127.0.0.1",
+    // "dialect": "mysql"
+
 db.sequelize.sync({ /* force: true */ }).then(function() {
   app.listen(port, function() {
     console.log("App listening on port " + port);
