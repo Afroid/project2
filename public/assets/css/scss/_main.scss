@@ -148,7 +148,6 @@ header#mainHeader{
 
 	#depthChart{
 		min-height: 250px;
-
 		ul{
 		    left: 0%;
 		    -webkit-padding-start: 0px;
@@ -168,6 +167,14 @@ header#mainHeader{
 		li:nth-child(even){
 			background-color: #cac9c9;
 			border: 3px solid rgba(114,114,114,0.16);
+		}
+
+		#players {
+			width: 60%;
+		}
+		#positions {
+			width: 40%;
+			margin: 8px 0px;
 		}
 	}		
 }

@@ -26,11 +26,11 @@ try{
 
 	    // var team = req.params.team;//sql 
 	    var team = "ATL";
-	    // var dataTimer, homeTimer, awayTimer;
+	    var dataTimer, homeTimer, awayTimer;
 	    var schedule, home, homeID, awayID, away, venue, bc, zipCode, time, city, thisData, info, newSchedule;
 	    var j = dayOfMonth;
 
-	    	schedule="http://api.sportradar.us/mlb-t6/games/2017/05/" + j +"/schedule.json?api_key=y89xxrup6qutvvyqqsxu8hv3";
+	    	schedule="http://api.sportradar.us/mlb-t6/games/2017/07/" + j +"/schedule.json?api_key=y89xxrup6qutvvyqqsxu8hv3";
 	    	// schedule="http://api.sportradar.us/mlb-t6/games/2017/05/20/schedule.json?api_key=c4q2dh7afte4fkv6sfh6jb4d";	    	
 	    	getTheData(schedule);
 	    	console.log("getTheData(schedule)");
@@ -67,7 +67,7 @@ try{
 					            		break;
 					        		}else{
 							        	j++;
-							        	newSchedule ="http://api.sportradar.us/mlb-t6/games/2017/05/"+j+"/schedule.json?api_key=c4q2dh7afte4fkv6sfh6jb4d"
+							        	newSchedule ="http://api.sportradar.us/mlb-t6/games/2017/07/"+j+"/schedule.json?api_key=c4q2dh7afte4fkv6sfh6jb4d"
 							         	// getTheData(newSchedule);
 							        	getDataTimer();
 									    function getDataTimer() {
@@ -163,8 +163,8 @@ try{
 }catch(err){
 	console.log("Err caught in awayDepthChart(): ", err);
 }
-	venue();
-	// homeDepthChart();
+	// venue();
+	homeDepthChart();
 	// awayDepthChart();
 
 });
