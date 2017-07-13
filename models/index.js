@@ -11,8 +11,8 @@ var config    = require(path.join(__dirname, '..', 'config', 'config.json'))[env
 var db        = {};
 
 
-if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable]);
+if (config.test) {
+  var sequelize = new Sequelize(process.env[config.test]);
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
