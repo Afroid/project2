@@ -16,8 +16,6 @@ var db        = {};
   // var sequelize = new Sequelize(process.env[config.test]);
   var sequelize = new Sequelize("qbd6ru6f5h9i4zc6", "xvp8o7uqxma31xw9", "wg5quba6q5ch9qh8", {
   host: 'hngomrlb3vfq3jcr.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-  dialect: 'mysql'|'sqlite'|'postgres'|'mssql',
-
   pool: {
     max: 5,
     min: 0,
