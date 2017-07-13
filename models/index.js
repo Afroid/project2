@@ -11,11 +11,14 @@ var config    = require(path.join(__dirname, '..', 'config', 'config.json'))[env
 var db        = {};
 
 
-if (config.test) {
-  var sequelize = new Sequelize(process.env[config.test]);
-} else {
-  var sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
+// if (config.test) {
+  console.log("Inside config.test if");
+  // var sequelize = new Sequelize(process.env[config.test]);
+  var sequelize = new Sequelize("qbd6ru6f5h9i4zc6", "xvp8o7uqxma31xw9", "wg5quba6q5ch9qh8");  
+  console.log("After sequelize variables");
+// } else {
+//   var sequelize = new Sequelize(config.database, config.username, config.password, config);
+// }
 
 fs
   .readdirSync(__dirname)
